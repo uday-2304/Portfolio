@@ -17,7 +17,7 @@ export function Navbar() {
   ];
 
   return (
-    <div className="fixed top-10 left-1/2 -translate-x-1/2 ml-64 z-50">
+    <div className="fixed top-10 left-1/2 -translate-x-1/2 ml-96 z-50">
       <motion.nav
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

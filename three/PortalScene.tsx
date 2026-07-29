@@ -6,8 +6,6 @@ import { useRef, useMemo, useState } from "react";
 import * as THREE from "three";
 import { useRouter } from "next/navigation";
 
-
-
 function createWebTexture() {
   if (typeof document === 'undefined') return null;
   const canvas = document.createElement('canvas');
@@ -287,7 +285,7 @@ function FloatingParticles() {
   return (
     <points ref={ref}>
       <bufferGeometry>
-        <bufferAttribute attach="attributes-position" count={count} array={positions} itemSize={3} />
+        <bufferAttribute attach="attributes-position" args={[positions, 3]} />
       </bufferGeometry>
       {/* Subtle warm orange particles for atmosphere */}
       <pointsMaterial size={0.03} color="#ffb066" transparent opacity={0.6} sizeAttenuation blending={THREE.AdditiveBlending} />
