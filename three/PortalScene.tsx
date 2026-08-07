@@ -297,7 +297,7 @@ export function PortalScene() {
   const [isUp, setIsUp] = useState(false);
 
   return (
-    <div className="fixed inset-0 z-0 bg-[#020813]">
+    <div className="absolute top-0 left-0 w-full h-screen z-0 bg-[#020813] overflow-hidden pointer-events-auto">
       <Canvas dpr={[1, 1.5]}>
         <PerspectiveCamera makeDefault position={[0, 0, 8]} fov={45} />
         

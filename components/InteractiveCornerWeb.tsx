@@ -144,14 +144,16 @@ export function InteractiveCornerWeb() {
     initNodes();
     drawWeb();
     
-    window.addEventListener("resize", () => {
+    const handleResize = () => {
       setSize();
       initNodes();
-    });
+    };
+
+    window.addEventListener("resize", handleResize);
     window.addEventListener("mousemove", handleMouseMove);
     
     return () => {
-      window.removeEventListener("resize", setSize);
+      window.removeEventListener("resize", handleResize);
       window.removeEventListener("mousemove", handleMouseMove);
       cancelAnimationFrame(animationFrameId);
     };

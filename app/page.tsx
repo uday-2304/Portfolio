@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { About, Projects, Skills, Contact } from "@/components/Sections";
+import { About, Projects, Abilities, Achievements, Contact } from "@/components/Sections";
 import { PortalScene } from "@/three/PortalScene";
 import { WebBackground } from "@/components/WebBackground";
 import { InteractiveCornerWeb } from "@/components/InteractiveCornerWeb";
@@ -27,7 +27,8 @@ export default function Home() {
         <div className="pointer-events-auto">
           <About />
           <Projects />
-          <Skills />
+          <Abilities />
+          <Achievements />
           <Contact />
         </div>
       </div>
